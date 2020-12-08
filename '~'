@@ -1,0 +1,129 @@
+
+@media(max-width 940px)
+{
+        #nav_bar
+        {
+                display: none;
+        }
+                #hamburger_menu
+        {
+                display: flex;
+        }
+}
+
+@media(min-width 941px)
+{
+        #hamburger_menu
+        {
+                display: none;
+        }
+}
+
+
+*{
+        margin: 0px;
+        padding: 0px;
+}
+
+.header
+{
+        position: fixed;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%;
+        height: 75px;
+        background-color: #4B0082;
+        z-index: 2;
+}
+
+#nav_header
+{
+        width: 350px;
+        height: 100%;
+        margin-right: 50px;
+}
+
+#nav_bar
+{
+        width: 900px;
+        height: 100%;
+        margin-right: 50px;
+}
+
+#nav_container
+{
+        height: 75px;
+        margin-right: 5%;
+        display: flex;
+        justify-content: space-evenly;
+}
+
+.nav_elements
+{
+        display: flex;
+        align-items: center;
+                text-decoration: underline;
+}
+
+#hamburger_menu
+{
+        height: 100%;
+        width: 80px;
+        margin-right: 10px;
+        margin-left: 5px;
+        text-align: center;
+        cursor: pointer;
+        color: white;
+        transition: 0.3s;
+}
+
+#hamburger_menu:hover
+{
+        background-color: #BDA0CB;
+}
+
+/*END HEADER CSS */
+
+#container
+{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        top: 75px;
+        margin: 0 auto;
+        background-color: #F8F8F8;
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+}
+
+.big_info_block
+{
+        width: 100%;
+        height: 40%;
+        padding-top: 80px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+}
+
+#credits
+{
+        text-align: right;
+        font-family: "Helvetica", "Arial", "Times New Roman";
+        font-size: 10px;
+        font-weight: bold;
+        color: #CCCCCC;
+        margin-right: 10px;
+}
+.box{
+
+   border: 2px solid red;
+  width: 300px;
+  display: contents;
+  position: relative;
+  left: 30px; 
+}

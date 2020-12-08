@@ -1,0 +1,43 @@
+<?php
+
+
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', true);
+
+$host = "34.66.215.92";
+$dbusername = "root";
+$dbpassword = "";
+$dbname ="users";
+$errors= array();
+
+
+$conn =mysqli_connect ($host, $dbusername, $dbpassword ,$dbname);
+if (myqli_connect_error($conn){
+	echo "connection didnt happen";}
+else {
+	echo"connection success"; }
+
+if(isset($_POST['submit'])){
+$user = $_POST['user'];
+$pass = $_POST['pass'];
+$verifypass = $_POST['verifypass'];
+
+$sql_e = "SELECT * FROM loginform where user = '$user'";
+$result = mysqli_query($conn, $sql_e);
+$num = mysqli_num_rows($result);
+
+
+
+if($num == 1){
+	echo " Email Already taken";
+}
+else{
+	$done = "insert into loginform(user,password) values ('$user', '$pass')";
+	mysqli_query($conn,$done)
+		echo " Successful registering";
+
+}
+mysqli_close($conn);
+
+?>
+
