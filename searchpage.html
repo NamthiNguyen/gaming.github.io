@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+
+		<script src="carterFunctions.js"></script>
+		<script>
+			var queryString = decodeURIComponent(window.location.search);
+			queryString = queryString.substring(1);
+			var queries = queryString.split("&");
+			var gameName = queries[0]
+ 			console.log(gameName);
+			gameName = gameName.substring(gameName.indexOf("=")+1,gameName.length);
+			console.log(gameName);
+			var game = new Game(gameName)
+
+		</script>
+		<div id = "output"></div>
+
+
+		<form>
+		  <div>
+			<p id="id" hidden></p>
+			<p id="game" hidden></p>
+			<p id="success"></p>
+			<button id ="follow" type="button">Follow Game</button>
+			<script src="followGame.js"></script>	
+		</div>
+		</form>
+		<a href = "index.html"><button>Back</button</a>
+		<script source="carterFunctions.js"></script>
+		<script source="followGame.js"></script>
+	</body>
+		
+</html>
+
