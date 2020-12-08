@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Signup</title>
+        <link rel="stylesheet" type="text/css" href="login.css">
+    </head>
+    <body>
+        <div class="loginbox">
+        <h1>
+            <center> Signup/ Register </center> 
+        </h1>
+        
+        <form action="Register.php" method="POST" onSubmit="return checkPassword(this)">
+
+
+		<div class = "col-12 col-md-6 col-xl-4 text-center box-Login absolute-center-box">
+
+			<div class="login-link text-left"> 
+				<a href="./loginpage.html">login</a>
+				<a href="./signup.html" class = "active">signup</a>
+			</div>
+
+			<div  class = "form-group-3">
+			
+          
+        <label for="username">Email:</label>
+                    
+         <input class= form-control id=username type="text" name="user" placeholder="user"  required autofocus>
+		</div>
+
+          <div class = "form-group-3">
+                
+         <label for="password">Password:</label>
+                 
+         <input class ="form-control" id="password" type="password"  name="pass" placeholder="password"  required autofocus>
+	 <input type="checkbox" onclick="passwordshow()"> show
+	 </div>
+
+   
+   <script>
+function passwordshow() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+</script>
+	         
+<div class="form-control-3">
+
+ <label for="verifypass">Verify Password:</label>
+	 <input class = "form-control" id=verifypass type="password"  name="verifypass" placeholder = "verify psssword" required autofocus>
+<div>
+
+        <input class="login" type="submit" name="submit" value ="Signup">
+        </form>
+         
+                           
+                
+            
+           
+		    <div>  
+      
+    
+    </body>
+ 
+<script>
+
+            // Function to check Whether both passwords
+            // is same or not.
+            function checkPassword(form) {
+                password1 = form.password.value;
+                password2 = form.verifypass.value;
+
+                // If password not entered
+                if (password1 == '')
+                    alert ("Please enter Password");
+
+                // If confirm password not entered
+                else if (password2 == '')
+                    alert ("Please enter confirm password");
+
+                // If Not same return False.
+                else if (password1 != password2) {
+                    alert ("\nPassword did not match: Please try again...")
+                    return false;
+                }
+
+                // If same return True.
+                else{
+                    alert("Password Match!")
+                    return true;
+                }
+            }
+        </script>
+</html>
+
+
+
